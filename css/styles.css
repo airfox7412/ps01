@@ -1,0 +1,95 @@
+* {
+	font-family: 'Droid Sans', Tahoma;
+}
+
+html {
+	border: none;
+}
+
+body {
+	font-size: 10pt;
+	color: #000;
+	margin: 50px;
+	padding: 0px;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	user-select: text;
+	border: none;
+	cursor: default;
+}
+
+a {
+	color: #39f;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #C00;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0px;
+	font-family: 'Droid Serif';
+}
+
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+	display: block;
+	font-size: 13px;
+	font-weight: normal;
+	color: #999;
+	font-family: 'Droid Sans', Tahoma;
+	text-shadow: none;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 14px;
+}
+
+h4 {
+	font-size: 12px;
+}
+
+h5 {
+	font-size: 10px;
+}
+
+h6 {
+	font-size: 8px;
+}
+
+h1.logo {
+	font-size: 42px;
+	margin: 0px;
+	text-shadow: #AAA 2px 2px 2px;
+}
+
+hr {
+	height: 0px;
+	border: none;
+	border-top: #DDD 1px solid;
+	margin: 10px 0px;
+}
+
+.clear {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+}
+
+div.container {
+	width: 720px;
+	margin: 0px auto;
+	padding: 10px;
+}

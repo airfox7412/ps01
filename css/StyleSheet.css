@@ -1,0 +1,474 @@
+﻿body {
+	background-color: inherit; /* background color */
+	color: inherit; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: small; /* font size */
+	margin: 0px 0px 0px 0px; /* top right bottom left */
+}
+
+.simpleTree
+{
+	margin:0;
+	padding:0;	
+	width: 160px;
+	height:495px;
+	overflow:auto;
+	border: 0px solid #007799;
+}
+.simpleTree li
+{
+	list-style: none;
+	margin:0;
+	padding:0 0 0 40px;
+	line-height: 20px;
+}
+.simpleTree li span
+{
+	display:inline;
+	clear: left;
+	white-space: nowrap;
+}
+.simpleTree ul
+{
+	margin:0; 
+	padding:0;
+}
+.simpleTree .root
+{
+	margin-left:-16px;
+	background: url(../images/root.gif) no-repeat 16px 0 #ffffff;
+}
+.simpleTree .line
+{
+	margin:0 0 0 -16px;
+	padding:0;
+	line-height: 3px;
+	height:3px;
+	font-size:3px;
+	background: url(../images/line_bg.gif) 0 0 no-repeat transparent;
+}
+.simpleTree .line-last
+{
+	margin:0 0 0 -16px;
+	padding:0;
+	line-height: 3px;
+	height:3px;
+	font-size:3px;
+	background: url(../images/spacer.gif) 0 0 no-repeat transparent;
+}
+.simpleTree .line-over
+{
+	margin:0 0 0 -16px;
+	padding:0;
+	line-height: 3px;
+	height:3px;
+	font-size:3px;
+	background: url(../images/line_bg_over.gif) 0 0 no-repeat transparent;
+}
+.simpleTree .line-over-last
+{
+	margin:0 0 0 -16px;
+	padding:0;
+	line-height: 3px;
+	height:3px;
+	font-size:3px;
+	background: url(../images/line_bg_over_last.gif) 0 0 no-repeat transparent;
+}
+.simpleTree .folder-open
+{
+	margin-left:-16px;
+	background: url(../images/collapsable.gif) 0 -2px no-repeat #fff;
+}
+.simpleTree .folder-open-last
+{
+	margin-left:-16px;
+	background: url(../images/collapsable-last.gif) 0 -2px no-repeat #fff;
+}
+.simpleTree .folder-close
+{
+	margin-left:-16px;
+	background: url(../images/expandable.gif) 0 -2px no-repeat #fff;
+}
+.simpleTree .folder-close-last
+{
+	margin-left:-16px;
+	background: url(../images/expandable-last.gif) 0 -2px no-repeat #fff;
+}
+.simpleTree .doc
+{
+	margin-left:-16px;
+	background: url(../images/leaf.gif) 0 -1px no-repeat #fff;
+}
+.simpleTree .doc-last
+{
+	margin-left:-16px;
+	background: url(../images/leaf-last.gif) 0 -1px no-repeat #fff;
+}
+.simpleTree .ajax
+{
+	background: url(../images/spinner.gif) no-repeat 0 0 #ffffff;
+	height: 16px;
+	display:none;
+}
+.simpleTree .ajax li
+{
+	display:none;
+	margin:0; 
+	padding:0;
+}
+.simpleTree .trigger
+{
+	display:inline;
+	margin-left:-32px;
+	width: 28px;
+	height: 11px;
+	cursor:pointer;
+}
+.simpleTree .text
+{
+	cursor: default;
+}
+.simpleTree .active
+{
+	cursor: default;
+	background-color:#F7BE77;
+	padding:0px 2px;
+	border: 1px dashed #444;
+}
+#drag_container
+{
+	background:#ffffff;
+	color:#000;
+	font: normal 11px arial, tahoma, helvetica, sans-serif;
+	border: 1px dashed #767676;
+}
+#drag_container ul
+{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+
+#drag_container li
+{
+	list-style: none;
+	background-color:#ffffff;
+	line-height:18px;
+	white-space: nowrap;
+	padding:1px 1px 0px 16px;
+	margin:0;
+}
+#drag_container li span
+{
+	padding:0;
+}
+
+#drag_container li.doc, #drag_container li.doc-last
+{
+	background: url(../images/leaf.gif) no-repeat -17px 0 #ffffff;
+}
+#drag_container .folder-close, #drag_container .folder-close-last
+{
+	background: url(../images/expandable.gif) no-repeat -17px 0 #ffffff;
+}
+
+#drag_container .folder-open, #drag_container .folder-open-last
+{
+	background: url(../images/collapsable.gif) no-repeat -17px 0 #ffffff;
+}
+.contextMenu
+{
+	display:none;
+}
+
+.pfont{
+    color: #ffffff; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: 11px; /* font size */	
+}
+
+.p2font{
+    color: #000000; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: 12px; /* font size */	
+}
+
+.dfont{
+    color: #ffffff; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: 12px; /* font size */	
+}
+
+div.pickdate {
+	padding:9px;
+	font-family: "細明體", "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+	font-size: 9px; /* font size */	
+}
+
+div.pb_status{
+	color: #FFFFFF;
+	font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
+	font-size: 11px; /* font size */		
+}
+.style1{
+    color: inherit; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: 13px; /* font size */	
+}
+
+.style3{
+    color: inherit; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: 13px; /* font size */	
+}
+
+table.ocxtable{
+	border:0;
+	border-collapse:collapse;
+	background-color:#000000;
+	width:600px;
+	height:450px;
+}
+
+table.ocxtable th,td{
+	padding:0;
+	margin:0;
+	border: 0px solid;
+	border-color: #006699;
+}
+
+div.dtable{
+	/* overflow:auto; */
+	overflow:scroll;
+	width:158px;
+	height:370px;
+	text-align:left;
+}
+
+.stable {
+	width: 350%; /* table width */	
+	color: #FFFFFF; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: x-small; /* font size */
+	border: 0px outset; /* border */
+	border-collapse: collapse;
+}
+
+.stable th{
+	padding: 0px; /* cell padding */
+	border: 1px solid; /* cell spacing */
+	border-color: #FFFFFF;  /* table background color */
+	color:#000000;
+}
+
+.stable td{
+	padding: 4px; /* cell padding */
+	border: 1px solid; /* cell spacing */
+	border-color: #FFFFFF;  /* table background color */
+}
+
+.stable tr:first-child{ 
+	background-color: #CCCCCC;
+	color:#0000FF;
+	font-size:12px;
+}
+
+.stable tr:hover{ 
+	background-color: #FFFF00;
+	color:#000000;
+	font-size:10px; 
+	cursor:pointer; 
+}
+
+div.dailytable{
+	border:1px solid #FFFFFF;
+	overflow:auto;
+	width:600px;
+	height:460px;
+	text-align:left;
+}	
+
+.dstable {
+	width: 100%; /* table width */	
+	color: #FFFFFF; /* text color */
+	font-family: 細明體; /* font name */
+	font-size: 11px; /* font size */
+	border: 0px outset; /* border */
+	border-collapse: collapse;
+}
+
+.dstable th{
+	padding: 0px; /* cell padding */
+	border: 1px solid; /* cell spacing */
+	border-color: #FFFFFF;  /* table background color */
+	color:#000000;
+}
+
+.dstable td{
+	padding: 4px; /* cell padding */
+	border: 1px solid; /* cell spacing */
+	border-color: #FFFFFF;  /* table background color */
+}
+
+.dstable tr:first-child{ 
+	background-color: #CCCCCC;
+	color:#0000FF;
+	font-size:12px;
+}
+
+.dstable tr:hover{ 
+	background-color: #FFFF00;
+	color:#000000;
+	font-size:12px; 
+	cursor:pointer; 
+}	
+
+.currRow{ 
+	background-color:#00FFFF;
+	color:#000000; 
+	cursor:pointer; 
+} 
+
+div.maptable{
+	border:1px solid #FFFFFF;
+	overflow:auto;
+	width:100%;
+	height:100%;
+	text-align:left;
+	background-color:#CCCCCC;
+}
+
+input.text, 
+input.password, 
+input.file,
+input.TextField, 
+textarea {
+	color: #000000;
+    border-top: solid 1px #333333;
+    border-left: solid 1px #333333;
+	border-right: solid 1px #999999;
+    border-bottom: solid 1px #cccccc;
+	background: url(images/inputbackgr.gif) top left no-repeat;
+}
+	
+input.highlight, textarea.highlight {
+	background: #e8eff7;
+    border-color: #37699f;
+}
+
+table.alltable{
+	border:0;
+	border-collapse:collapse;	
+	background: #006699 url(../images/bottom_bg.jpg) 50% 50% repeat-y;
+	width:950px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.alltable td{
+	padding:0;
+	margin:0;
+	border: 0px solid;
+	border-color: #006699;
+}
+
+table.chgtable{
+	border:0;
+	border-collapse:collapse;
+	background-color:#006699;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.ctable{
+	border:2;
+	border-collapse:collapse;
+	background-color:#ffffff;
+	width:930px;
+	margin-left: auto;
+	margin-right: auto;
+}
+table.ctable td{
+	padding:0;
+	margin:0;
+	border: 0px solid;
+	border-color: #006699;
+}
+
+table.settable{
+	border:0;
+	border-collapse:collapse;
+	background-color:#006699;
+	width:900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.settable td{
+	padding:0;
+	margin:0;
+	border: 0px solid;
+	border-color: #006699;
+}
+
+table.mapalltable{
+	border:0;
+	border-collapse:collapse;
+	background-color:#006699;
+	width:1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.mapalltable td{
+	padding:0;
+	margin:0;
+	border: 0px solid;
+	border-color: #006699;
+}
+
+.block {
+	display: block;
+	border: 0px;
+}
+
+.toptable {
+	border: 0px;
+	background: url(../images/top_bg.jpg) ;
+	width: 950px;
+	height: 94px;
+	margin: 0px 0px 0px 0px;
+	color: White;
+}
+
+.ctrltable {
+	border:0;
+	border-collapse:collapse;
+	background: url(../images/ctrl_bg.jpg) ;
+	width: 143px;
+	height: 491px;
+	margin: 0px 0px 5px 0px;
+	color: White;
+}
+
+.bottomtable {
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	border-collapse:collapse;
+		background: url(../images/mb_bg.jpg);
+		width: 608px;
+		height: 55px;
+		margin: 0px 0px 0px 0px;
+		color: White;
+}
+
+.pbottomtable {
+	border: 0px;
+	border-collapse:collapse;
+	background: url(../images/pmb_bg.jpg) ;
+	width: 608px;
+	height: 55px;
+	margin: 0px 0px 0px 0px;
+	color: White;
+}
